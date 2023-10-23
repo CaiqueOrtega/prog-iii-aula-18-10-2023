@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <script type="text/javascript" src="./scripts.js"></script>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    
+    <body>
+    <div class="container">
+        <form id="client-form" onsubmit="postClient(); return false;">
+            <h1>Client</h1>
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Digite seu Nome..." required><br>
+
+            <label for="surname">Surname:</label>
+            <input type="text" id="surname" placeholder="Digite seu Sobrenome" required><br>
+
+            <label for="document">Document:</label>
+            <input type="text" id="document" placeholder="Digite seu CPF ou RG" required><br>
+
+            <button type="submit" class="green">Create</button>
+            <button type="button" class="blue" onclick="getClients()">Refresh</button>
+        </form>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Document</th>
+            </tr>
+            </thead>
+            <tbody id="client">
+            <!-- Conteúdo da tabela -->
+            </tbody>
+        </table>
+    </div>
+    </body>
+</html>
